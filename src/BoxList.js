@@ -22,7 +22,15 @@ function BoxList() {
 
   return (
     <div>
-      {boxes.map(box => <Box(box) />)}
+      {boxes.map(({ id, width, height, backgroundColor }) =>
+        <Box
+          key={id}
+          id={id}
+          width={width}
+          height={height}
+          remove={remove}
+          backgroundColor={backgroundColor}
+        />)}
     </div>
   );
 }
