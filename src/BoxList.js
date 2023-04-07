@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Box from "./Box";
+import NewBoxForm from "./NewBoxForm";
 
 /** Manage list of boxes
  *
@@ -22,6 +23,7 @@ function BoxList() {
 
   return (
     <div>
+      <NewBoxForm createBox={add} />
       {boxes.map(({ id, width, height, backgroundColor }) =>
         <Box
           key={id}
